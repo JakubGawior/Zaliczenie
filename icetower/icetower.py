@@ -67,7 +67,7 @@ def newgame():
             elif line[j] == 'f':
                 objs.append(Flaga('flaga.png', (j * 33, 33 * i)))
         i = i + 1
-        #music.play('song.mp3')
+        music.play('song.mp3')
 
 
 def draw():
