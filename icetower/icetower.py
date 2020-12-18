@@ -76,6 +76,7 @@ def draw():
         obj.draw()
     ice.draw()
     screen.draw.text(str(ice.points), color="black", midtop=(WIDTH/8*0.5, 10), fontsize=50, shadow=(0, 1))
+    screen.draw.text("Aby wygrać:\nidź do mety\nalbo\nzdobądź 40 punktów!!!", color="black", midtop=(WIDTH /3, 10), fontsize=30, shadow=(0, 0))
     if ice.win:
         screen.draw.text("!!! YOU WIN !!!", color="yellow", midtop=(WIDTH/2, 2), fontsize=170, shadow=(0, 0))
 
@@ -140,6 +141,8 @@ def update(dt):
             if obj.image == "flaga.png":
                 if np.abs(obj.center[0]-ice.center[0]) < 1:
                     ice.win = True
+            elif ice.points == 40:
+                ice.win = True
     if ice.dead:
         newgame()
 
