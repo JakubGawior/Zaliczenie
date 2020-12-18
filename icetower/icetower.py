@@ -84,7 +84,7 @@ def moveall(x):
         if 0 <= ice.x:
             ice.x = ice.x - x
         elif ice.x < 0:
-            ice.x < 0
+            ice.x = 0
     else:
         if 0 <= ice.x < WIDTH / 2:
             ice.x = ice.x - x
