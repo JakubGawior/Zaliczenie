@@ -127,9 +127,9 @@ def move(dt):
         if ice.colliderect(obj):
             obj.react()
     if ice.vy != 0 and ice.dir == "right":
-        ice.image = "ice.png"
-    elif ice.vy != 0 and ice.dir == "left":
         ice.image = "ice2.png"
+    elif ice.vy != 0 and ice.dir == "left":
+        ice.image = "ice.png"
     if ice.bottom > HEIGHT:
         ice.dead = True
 
@@ -165,4 +165,3 @@ objs = []
 newgame()
 
 pgzrun.go()
-
